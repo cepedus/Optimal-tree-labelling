@@ -4,12 +4,18 @@ import java.util.HashSet;
 class Vertex {
     Set<Character> label = new HashSet<Character>();
     int id;
+    
     Vertex(int id, String label) {
         this.id = id;
         if(label == "$") this.label = null;
         else{
-            for(char c : label.toCharArray()) label.add(c);
+            for(char c : label.toCharArray()) this.label.add(c);
         }
+    }
+    
+    Vertex(int id) {
+        this.id = id;
+        this.label = null;
     }
 
     public boolean equals(Vertex otherVertex){
