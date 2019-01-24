@@ -8,9 +8,7 @@ class Vertex {
     Vertex(int id, String label) {
         this.id = id;
         if(label == "$") this.label = null;
-        else{
-            for(char c : label.toCharArray()) this.label.add(c);
-        }
+        else for(char c : label.toCharArray()) this.label.add(c);
     }
     
     Vertex(int id) {
