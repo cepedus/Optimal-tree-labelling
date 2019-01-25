@@ -27,6 +27,22 @@ public class TestParser {
 
     // File reader
 
+    private int[] intParser(String line){
+        String[] parts = line.split(" ");
+        int[] out = new int[2];
+        out[0] = Integer.parseInt(parts[0]);
+        out[1] = Integer.parseInt(parts[1]);
+        return out;
+    }
+
+    public LabeledTree makeTree(){
+        BufferedReader br = new BufferedReader(new FileReader(this.test_dir))
+            String line;
+            
+               // process the line.
+            
+        
+    }
     
 
     public static void main(String[] args) {
